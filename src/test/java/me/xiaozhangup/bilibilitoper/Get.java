@@ -8,10 +8,12 @@ public class Get {
 
     @Test
     public void get() {
-        String bvid = "BV1zU4y1r7F2";
+        String bvid = "BV1yt4y1m77u";
         JSONObject jsonObject = BGetter.getBaseJson(bvid);
         System.out.println(jsonObject);
         System.out.println(BGetter.getVideo(jsonObject).getString("title"));
+        System.out.println(BGetter.getLike(BGetter.getVideo(jsonObject)));
+        System.out.println(BGetter.getView(BGetter.getVideo(jsonObject)));
     }
 
 }
